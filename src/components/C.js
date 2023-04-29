@@ -1,16 +1,14 @@
-import React from 'react'
-import {Fname} from '../App';
+import React from "react";
+import { useContext } from "react";
+import { Fname } from "../App";
 
 const C = () => {
+  const fName = useContext(Fname);
   return (
     <>
-    <Fname.Consumer>
-        {(fName) => {
-            return <h1>{fName}</h1>
-        }}
-    </Fname.Consumer>
+      <h1>{fName}</h1>
     </>
   )
-}
+};
 
-export default C
+export default C;
